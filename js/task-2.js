@@ -4,7 +4,11 @@ function calcAverageCalories(days) {
   for (dayCal of calArr) {
     totCal += dayCal.calories;
   }
-  return totCal / calArr.length;
+  if (totCal > 0) {
+    return totCal / calArr.length;
+  } else {
+    return 0;
+  }
 }
 
 console.log(
